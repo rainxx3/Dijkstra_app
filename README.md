@@ -1,5 +1,5 @@
 # Dijkstra_app
-
+~~~
 import tkinter as tk
 root = tk.Tk()
 
@@ -108,3 +108,4 @@ button = tk.Button(frame, text='Go!', bg='#00CED1', command=run_algorithm)
 button.place(relx=0.35, rely=0.8, relheight=0.07, relwidth=0.3)
 
 root.mainloop()
+~~~
