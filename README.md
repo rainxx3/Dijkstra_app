@@ -58,12 +58,14 @@ def run_algorithm():
                     shortest_distance[childNode] = weight + shortest_distance[minNode]
                     parents[childNode] = minNode
             unseenNodes.pop(minNode)
-
+################################### im geting an error here. 
+###goes straight to path not founf.
+###sometimes its an attribute error
         currentNode = endnode
         while currentNode != start:
             try:
                 path.insert(0,currentNode)
-                currentNode = parents[currentNode.get()]
+                currentNode = parents[currentNode.get()] ###mainly this line
             except KeyError:
                 print('path not found')
                 break
@@ -72,7 +74,7 @@ def run_algorithm():
         if shortest_distance[end.get()] != infinity:
             print('Shortest dist ' + str(shortest_distance[end]))
             print('and path is ' + str(path))
-
+#################################################
 
     algorithm(graph, startnode, endnode)
   
